@@ -5,9 +5,11 @@ Usage
 Step 1 - install
 
 npm install react-native-keyboardmanager --save  || yarn add react-native-keyboardmanager
+
 Step 2 - link
 
 react-native link
+
 Step 3 - import and use in project
 
 AppDelegate 导入 #import <IQKeyboardManager.h>
