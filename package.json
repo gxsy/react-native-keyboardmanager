@@ -1,0 +1,19 @@
+{
+  "name": "react-native-keyboardmanager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wz564354891/react-native-keyboardManager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wz564354891/react-native-keyboardManager/issues"
+  },
+  "homepage": "https://github.com/wz564354891/react-native-keyboardManager#readme"
+}
