@@ -22,11 +22,17 @@ AppDelegate 导入
 #import <IQKeyboardManager.h>
 ```
 
-##### Step 4 - 在didFinishLaunchingWithOptions导入下面三句代码:
+##### Step 4 - 在didFinishLaunchingWithOptions导入:
 ```
+必要配置
 [[IQKeyboardManager sharedManager] setEnable:YES];
 [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
 [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:10.f];
+
+选用配置
+[[IQKeyboardManager sharedManager] setToolbarDoneBarButtonItemText:NSLocalizedString(@"Done", nil)];//国际化
+
+
 ```
 ### 设置多语言
 
