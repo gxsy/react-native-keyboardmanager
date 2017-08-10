@@ -34,67 +34,67 @@ AppDelegate 导入
 ```
 选中project->Info->Localizations，然后点击"+"，添加需要国际化/本地化的语言，如下图（默认需要勾选Use Base Internationalization）：
 ```
-![Image text](./image/5.jpg)
+![Image text](./image/5.png)
 ```
 此处以添加法语为例，如下图
 ```
-![Image text](./image/6.jpg)
+![Image text](./image/6.png)
 ```
 弹出如下对话框，直接点击finish，如下图：
 ```
-![Image text](./image/7.jpg)
+![Image text](./image/7.png)
 ```
 同理，添加简体中文、繁体中文、韩语，最终结果如下图：
 ```
-![Image text](./image/8.jpg)
+![Image text](./image/8.png)
 
 #### Step 2 字符串本地化
 ```
 首先需要command + N，选择iOS -> Resource -> Strings File
 ```
-![Image text](./image/9.jpg)
+![Image text](./image/9.png)
 ```
 文件名必须命名为Localizable
 备注：因本人电脑取消隐藏文件后缀名，所以会自动补全.strings后缀名。
 ```
-![Image text](./image/10.jpg)
+![Image text](./image/10.png)
 ```
 文件创建成功，查看Xcode左侧导航列表，发现多了一个名为Localizable.strings的文件，如下图：
 ```
-![Image text](./image/11.jpg)
+![Image text](./image/11.png)
 ```
 选中Localizable.strings文件，在Xcode的File inspection中点击Localize，目的是选择我们需要本地化的语言（和本地化App名称同理），如下图：
 ```
-![Image text](./image/12.jpg)
+![Image text](./image/12.png)
 ```
 依次选择English->Localize，如下图：
 ```
-![Image text](./image/13.jpg)
-![Image text](./image/14.jpg)
+![Image text](./image/13.png)
+![Image text](./image/14.png)
 ```
 然后我们发现Xcode右侧的File inspection变成了下图的样式：
 ```
-![Image text](./image/15.jpg)
+![Image text](./image/15.png)
 ```
 然后勾选French、Chinese（zh-Hans）、Chinese（zh-Hant）、Korean，如下图：
 ```
-![Image text](./image/16.jpg)
+![Image text](./image/16.png)
 ```
 此时，Xcode左侧的Localizable.stirings左侧多了一个箭头，展开后，如下图所示：
 ```
-![Image text](./image/17.jpg)
+![Image text](./image/17.png)
 ```
 然后我们只需要在Localizable.strings下对应的文件中，分别以Key-Value的形式，为代码中每一个需要本地化的字符串赋值，如下图：
 ```
-![Image text](./image/18.jpg)
-![Image text](./image/19.jpg)
-![Image text](./image/20.jpg)
-![Image text](./image/21.jpg)
-![Image text](./image/22.jpg)
+![Image text](./image/18.png)
+![Image text](./image/19.png)
+![Image text](./image/20.png)
+![Image text](./image/21.png)
+![Image text](./image/22.png)
 ```
 本地化代码中的字符串，如下图：
 ```
-![Image text](./image/23.jpg)
+![Image text](./image/23.png)
 
 
 
