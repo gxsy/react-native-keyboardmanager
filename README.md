@@ -28,6 +28,78 @@ AppDelegate 导入
 [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
 [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:10.f];
 ```
+### 设置多语言
+
+#### Step 1 配置需要国际化的语言
+```
+选中project->Info->Localizations，然后点击"+"，添加需要国际化/本地化的语言，如下图（默认需要勾选Use Base Internationalization）：
+```
+![Image text](./image/5.jpg)
+```
+此处以添加法语为例，如下图
+```
+![Image text](./image/6.jpg)
+```
+弹出如下对话框，直接点击finish，如下图：
+```
+![Image text](./image/7.jpg)
+```
+同理，添加简体中文、繁体中文、韩语，最终结果如下图：
+```
+![Image text](./image/8.jpg)
+
+#### Step 2 字符串本地化
+```
+首先需要command + N，选择iOS -> Resource -> Strings File
+```
+![Image text](./image/9.jpg)
+```
+文件名必须命名为Localizable
+备注：因本人电脑取消隐藏文件后缀名，所以会自动补全.strings后缀名。
+```
+![Image text](./image/10.jpg)
+```
+文件创建成功，查看Xcode左侧导航列表，发现多了一个名为Localizable.strings的文件，如下图：
+```
+![Image text](./image/11.jpg)
+```
+选中Localizable.strings文件，在Xcode的File inspection中点击Localize，目的是选择我们需要本地化的语言（和本地化App名称同理），如下图：
+```
+![Image text](./image/12.jpg)
+```
+依次选择English->Localize，如下图：
+```
+![Image text](./image/13.jpg)
+![Image text](./image/14.jpg)
+```
+然后我们发现Xcode右侧的File inspection变成了下图的样式：
+```
+![Image text](./image/15.jpg)
+```
+然后勾选French、Chinese（zh-Hans）、Chinese（zh-Hant）、Korean，如下图：
+```
+![Image text](./image/16.jpg)
+```
+此时，Xcode左侧的Localizable.stirings左侧多了一个箭头，展开后，如下图所示：
+```
+![Image text](./image/17.jpg)
+```
+然后我们只需要在Localizable.strings下对应的文件中，分别以Key-Value的形式，为代码中每一个需要本地化的字符串赋值，如下图：
+```
+![Image text](./image/18.jpg)
+![Image text](./image/19.jpg)
+![Image text](./image/20.jpg)
+![Image text](./image/21.jpg)
+![Image text](./image/22.jpg)
+```
+本地化代码中的字符串，如下图：
+```
+![Image text](./image/23.jpg)
+
+
+
+
+
 
 ### Manual installation
 ```
