@@ -3,33 +3,33 @@
 # react-native-keyboardmanager
 
 
-###Usage
+### Usage
 
-#####Step 1 - install
+##### Step 1 - install
 ```
 npm install react-native-keyboardmanager --save  || yarn add react-native-keyboardmanager
 ```
 
-#####Step 2 - link
+##### Step 2 - link
 ```
 react-native link
 ```
 
-#####Step 3 - import and use in project
+##### Step 3 - import and use in project
 
 AppDelegate 导入
 ```
 #import <IQKeyboardManager.h>
 ```
 
-#####Step 4 - 在didFinishLaunchingWithOptions导入下面三句代码:
+##### Step 4 - 在didFinishLaunchingWithOptions导入下面三句代码:
 ```
 [[IQKeyboardManager sharedManager] setEnable:YES];
 [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
 [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:10.f];
 ```
 
-###Manual installation
+### Manual installation
 ```
 首先，我们在创建的ReactNative工程下的node_modules创建一个文件夹react-native-BGNativeModuleExample，然后我们在新创建的文件夹下再创建一个ios文件夹。
 
@@ -74,11 +74,11 @@ ios文件目录如下：
  ![image](./image/4.jpg)
 
 
-###发布上线
+### 发布上线
 ```
 我们按照上面步骤编写好原生模块之后，接下来将我们写的原生模块发布到npm。
 ```
-######1、我们需要创建github仓库
+###### 1、我们需要创建github仓库
 ```
 在github上创建一个仓库react-native-BGNativeModuleExample，然后关联到我们前面创建的react-native-BGNativeModuleExample目录
 
@@ -86,7 +86,7 @@ $ cd TestProject/node_modules/react-native-BGNativeModuleExample
 $ git init .
 $ git remote add origin https://github.com/liuchungui/react-native-BGNativeModuleExample.git
 ```
-######2、我们需要创建原生模块的入口文件
+###### 2、我们需要创建原生模块的入口文件
 ```
 我们需要在react-native-BGNativeModuleExample目录下创建一个index.js，它是整个原生模块的入口，我们这里只是将原生进行导出。
 
@@ -94,7 +94,7 @@ $ git remote add origin https://github.com/liuchungui/react-native-BGNativeModul
 import React, { NativeModules } from 'react-native';
 module.exports = NativeModules.BGNativeModuleExample;
 ```
-######3、发布到npm
+###### 3、发布到npm
 ```
 在发布到npm之前，我们需要创建一个package.json文件，这个文件包含了module的所有信息，比如名称、版本、描述、依赖、作者、license等。
 我们在react-native-BGNativeModuleExample根目录下使用npm init命令来创建package.json，系统会提示我们输入所需的信息，不想输入的直接按下Enter跳过。
@@ -164,7 +164,7 @@ Example/
 这样的话，我们npm进行发布的时候，就不会将Example发布到npm上了。
 
 ```
-######4、添加Example，测试是否可用，添加README
+###### 4、添加Example，测试是否可用，添加README
 ```
 我们在react-native-BGNativeModuleExample目录下创建一个Example的ReactNative工程，并且通过rnpm install react-native-nativemodule-example命令安装我们发布的react-native-nativemodule-example模块。
 
@@ -182,12 +182,12 @@ BGNativeModuleExample.testPrint("Jack", {
     weight: '7kg'
 });
 ```
-######5、我们在发布上线之后还需要编写README文件。
+###### 5、我们在发布上线之后还需要编写README文件。
 ```
 README文件是非常重要的，如果没有README文件，别人看到我们的原生组件，根本就不知道我们这个组件是用来干啥的。所以，我们很有必要添加一个README文件，这个文件需要告诉别人我们这个原生组件是干什么的、如何安装、API、使用手册等等。
 
 ```
-######6、原生模块升级，发布新版本
+###### 6、原生模块升级，发布新版本
 ```
 当我们添加新代码或者修复bug后，需要发布新的版本，我们只需要修改package.json文件中的version的值就行了，然后使用npm publish进行发布。
 
