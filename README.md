@@ -30,7 +30,14 @@ AppDelegate 导入
 [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:10.f];
 
 选用配置
-[[IQKeyboardManager sharedManager] setToolbarDoneBarButtonItemText:NSLocalizedString(@"Done", nil)];//国际化
+设置国际化,需要配置localizable.string
+[IQKeyboardManager sharedManager] setToolbarDoneBarButtonItemText:NSLocalizedString(@"Done", nil)];
+  
+设置完成按钮字体颜色
+[[IQKeyboardManager sharedManager] setToolbarTintColor:[UIColor blackColor]];
+  
+设置toolBar背景颜色,设置此项必须设置字体颜色
+[[IQKeyboardManager sharedManager] setToolbarBarTintColor:[UIColor redColor]];
 
 
 ```
