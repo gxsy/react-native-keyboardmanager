@@ -164,6 +164,7 @@ NSInteger const kIQPreviousNextButtonToolbarTag     =   -1005;
 
 @synthesize shouldToolbarUsesTextFieldTintColor =   _shouldToolbarUsesTextFieldTintColor;
 @synthesize toolbarTintColor                    =   _toolbarTintColor;
+@synthesize toolbarBarTintColor                 =   _toolbarBarTintColor;
 
 @dynamic shouldShowTextFieldPlaceholder;
 @synthesize shouldShowToolbarPlaceholder        =   _shouldShowToolbarPlaceholder;
@@ -1872,6 +1873,9 @@ NSInteger const kIQPreviousNextButtonToolbarTag     =   -1005;
                         {
                             toolbar.tintColor = [UIColor blackColor];
                         }
+                        if (_toolbarBarTintColor) {
+                            toolbar.barTintColor = _toolbarBarTintColor;
+                        }
                     }
                         break;
                 }
@@ -2008,6 +2012,10 @@ NSInteger const kIQPreviousNextButtonToolbarTag     =   -1005;
                             {
                                 toolbar.tintColor = [UIColor blackColor];
                             }
+                            if (_toolbarBarTintColor) {
+                                toolbar.barTintColor = _toolbarBarTintColor;
+                            }
+                            
                         }
                             break;
                     }

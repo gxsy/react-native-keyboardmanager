@@ -23,6 +23,7 @@
 
 
 #import <UIKit/UIView.h>
+#import <UIKit/UIButton.h>
 
 @class UIBarButtonItem;
 

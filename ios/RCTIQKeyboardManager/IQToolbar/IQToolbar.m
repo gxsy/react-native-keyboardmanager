@@ -41,6 +41,8 @@
 
     [[self appearance] setBarTintColor:nil];
     
+    [[self appearance] setBackgroundColor:nil];
+    
     //Background image
     [[self appearance] setBackgroundImage:nil forToolbarPosition:UIBarPositionAny           barMetrics:UIBarMetricsDefault];
     [[self appearance] setBackgroundImage:nil forToolbarPosition:UIBarPositionBottom        barMetrics:UIBarMetricsDefault];
@@ -55,6 +57,7 @@
     
     //Background color
     [[self appearance] setBackgroundColor:nil];
+    //[[self appearance] setBackgroundColor:(__bridge CGColorRef _Nullable)([UIColor yellowColor])];
 }
 
 -(void)initialize
@@ -125,6 +128,9 @@
         [item setTintColor:tintColor];
     }
 }
+
+
+
 
 -(void)setTitleFont:(UIFont *)titleFont
 {

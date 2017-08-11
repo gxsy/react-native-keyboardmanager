@@ -375,8 +375,10 @@
     //Flexible space
     [items addObject:[[self class] flexibleBarButtonItem]];
     
+    //此处修改button的按钮标题
     //Done button
     IQBarButtonItem *doneButton = [[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:action];
+    //IQBarButtonItem *doneButton =[[IQBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil) style:UIBarButtonItemStyleDone target:target action:action];
     [items addObject:doneButton];
     
     //  Adding button to toolBar.

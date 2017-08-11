@@ -32,6 +32,7 @@
 
     //Tint color
     [[self appearance] setTintColor:nil];
+    
 
     //Title
     [[self appearance] setTitlePositionAdjustment:UIOffsetZero forBarMetrics:UIBarMetricsDefault];
