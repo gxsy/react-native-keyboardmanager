@@ -24,7 +24,17 @@ AppDelegate 导入
 
 ##### Step 4 - 在didFinishLaunchingWithOptions导入:
 ```
-必要配置
+import IQKeyboardManager from 'react-native-keyboardmanager';
+
+// 设置键盘 toolbaar 开关
+   componentWillMount() {
+       IQKeyboardManager.setEnable(true);
+   }
+   // 退出时恢复, 否则其他页面需要重新设置状态
+   componentDidMount() {
+       IQKeyboardManager.setEnable(false);
+
+选用配置
 [[IQKeyboardManager sharedManager] setEnable:YES];
 [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
 [[IQKeyboardManager sharedManager] setKeyboardDistanceFromTextField:10.f];
